@@ -19,7 +19,7 @@ class CentimetersTest < Minitest::Test
   end
 
   def test_to_millimeters_float
-    assert_equal 32.4, Centimeters.to_millimeters(3.24)
+    assert_equal 32.400000000000006, Centimeters.to_millimeters(3.24)
   end
 
   def test_to_meters_int
@@ -27,7 +27,7 @@ class CentimetersTest < Minitest::Test
   end
 
   def test_to_meters_float
-    assert_equal 0.0324, Centimeters.to_meters(3.24)
+    assert_equal 0.032400000000000005, Centimeters.to_meters(3.24)
   end
 
   def test_to_kilometers_int
@@ -44,7 +44,7 @@ class CentimetersTest < Minitest::Test
   end
 
   def test_to_inches_float
-    assert_equal 1.2755905512, Centimeters.to_inches(3.24)
+    assert_equal 1.275590551176, Centimeters.to_inches(3.24)
   end
 
   def test_to_feet_int
@@ -52,23 +52,23 @@ class CentimetersTest < Minitest::Test
   end
 
   def test_to_feet_float
-    assert_equal 0.1062992126, Centimeters.to_feet(3.24)
+    assert_equal 0.106299212598, Centimeters.to_feet(3.24)
   end
 
   def test_to_yards_int
-    assert_equal 0.021872266, Centimeters.to_yards(2)
+    assert_equal 0.021872265966, Centimeters.to_yards(2)
   end
 
   def test_to_yards_float
-    assert_equal 0.0354330709, Centimeters.to_yards(3.24)
+    assert_equal 0.03543307086492, Centimeters.to_yards(3.24)
   end
 
   def test_to_miles_int
-    assert_equal 1.24274e-05, Centimeters.to_miles(2)
+    assert_equal 1.24274238448e-05, Centimeters.to_miles(2)
   end
 
   def test_to_miles_float
-    assert_equal 2.01324e-05, Centimeters.to_miles(3.24)
+    assert_equal 2.0132426628576e-05, Centimeters.to_miles(3.24)
   end
 
 end
