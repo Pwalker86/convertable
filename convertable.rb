@@ -1,7 +1,10 @@
-load 'config.rb'
+require_relative 'config.rb'
 
-module Convertable
+class Numeric
   include ConvertableErrors
-  include Inches
-  include Centimeters
+  include ToImperial
+  include ToMetric
+  include MetricUnits
+  include ImperialUnits
 end
+

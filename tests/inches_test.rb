@@ -2,7 +2,9 @@ gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-load 'config.rb'
+require_relative 'config.rb'
+
+#TODO: Fix tests
 
 class InchesTest < Minitest::Test
   include ConvertableErrors
