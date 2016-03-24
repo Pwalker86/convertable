@@ -2,17 +2,19 @@
 # require_relative 'conversions/length/to_imperial'
 
 class ConvertableUnit
-  # include ToImperial
-  # include ToMetric
+  include ToImperial
+  include ToMetric
 
-  attr_accessor :value, :unit
+  attr_accessor :value, :unit, :base_meters
 
-  def initialize(value, unit)
-    @value, @unit = value, unit
+  def initialize(value, base_meters = nil, unit = :meters)
+    @value = value
+    @base_meters = base_meters || value
+    @unit = unit
   end
 
   def inspect
-    "#{@value} meters"
+    "#{value} #{unit.to_s}"
   end
 
   # def +(other)
