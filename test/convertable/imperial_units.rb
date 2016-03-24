@@ -1,8 +1,4 @@
-gem 'minitest', '>= 5.0.0'
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require_relative '../lib/convertable.rb'
+require './test/test_helper'
 
 class MetricUnitTest < Minitest::Test
 
