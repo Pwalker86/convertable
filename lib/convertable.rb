@@ -1,4 +1,4 @@
-require_relative 'config.rb'
+require 'config.rb'
 
 class Numeric
   include MetricUnits
