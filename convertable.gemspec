@@ -4,7 +4,7 @@ require 'rake'
 
 Gem::Specification.new do |s|
   s.name          = 'convertable'
-  s.version       = '0.0.0'
+  s.version       = '0.0.4'
   s.date          = '2016-03-14'
   s.summary       = ''
   s.description   = ''

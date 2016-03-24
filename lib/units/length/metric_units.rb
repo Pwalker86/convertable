@@ -1,26 +1,26 @@
 module MetricUnits
   def meter
-    self
+    ConvertableUnit.new(self, :meter)
   end
   alias_method :meters, :meter
 
   def centimeter
-    self * 0.01
+    ConvertableUnit.new(self * 0.01, :centimeter)
   end
   alias_method :centimeters, :centimeter
 
   def millimeter
-    self * 0.001
+    ConvertableUnit.new(self * 0.001, :millimeter)
   end
   alias_method :millimeters, :millimeter
 
   def kilometer
-    self * 1000
+    ConvertableUnit.new(self * 1000, :kilometer)
   end
   alias_method :kilometers, :kilometer
 
   def decimeter
-    self * 0.1
+    ConvertableUnit.new(self * 0.1, :decimeter)
   end
   alias_method :decimeters, :decimeter
 end
