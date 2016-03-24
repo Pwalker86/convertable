@@ -1,9 +1,9 @@
-require_relative 'conversions/length/to_metric'
-require_relative 'conversions/length/to_imperial'
+# require_relative 'conversions/length/to_metric'
+# require_relative 'conversions/length/to_imperial'
 
 class ConvertableUnit
-  include ToImperial
-  include ToMetric
+  # include ToImperial
+  # include ToMetric
 
   attr_accessor :value, :unit
 
