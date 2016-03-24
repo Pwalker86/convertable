@@ -14,7 +14,7 @@ class MetricUnitTest < Minitest::Test
     assert_in_delta 0.00324, 3.24.millimeter.value, 0.001
   end
 
-  def test_centiimeter_method_value
+  def test_centimeter_method_value
     assert_in_delta 0.0324, 3.24.centimeter.value, 0.001
   end
 
