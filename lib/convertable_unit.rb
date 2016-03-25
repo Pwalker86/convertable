@@ -7,7 +7,7 @@ class ConvertableUnit
 
   attr_accessor :value, :unit, :base_meters
 
-  def initialize(value, base_meters = nil, unit = :meters)
+  def initialize(value, base_meters = nil, unit = :meter)
     @value = value
     @base_meters = base_meters || value
     @unit = unit
