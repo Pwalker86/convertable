@@ -1,6 +1,6 @@
 require './tests/test_helper'
 
-class MetricUnitTest < Minitest::Test
+class ImperialUnitTest < Minitest::Test
 
   def test_method_return_class
     assert_kind_of ConvertableUnit, 1.feet
