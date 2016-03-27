@@ -1,6 +1,6 @@
 require './tests/test_helper'
 
-class MetricUnitTest < Minitest::Test
+class ConvertableUnitTest < Minitest::Test
 
   def test_initialize_value
     assert_equal 20, 20.meter.value
