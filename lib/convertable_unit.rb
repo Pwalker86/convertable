@@ -1,6 +1,3 @@
-# require_relative 'conversions/length/to_metric'
-# require_relative 'conversions/length/to_imperial'
-
 class ConvertableUnit
   include ToImperial
   include ToMetric
@@ -14,15 +11,12 @@ class ConvertableUnit
   end
 
   def inspect
-    "#{value} #{unit.to_s}"
+    "#{value} #{unit.to_s.en.plural}"
   end
 
-  # def +(other)
-  #   if other.is_a?(NewUnit)
-  #     NewUnit.new(value + other.value)
-  #   else
-  #     super
-  #   end
-  # end
+  def +(other)
+    raise ArgumentError, "Please use a unit I can convert!" unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_meters + other.base_meters, base_meters + other.base_meters)
+  end
 
 end

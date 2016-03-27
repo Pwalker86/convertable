@@ -1,4 +1,4 @@
-require './test/test_helper'
+require './tests/test_helper'
 
 class MetricUnitTest < Minitest::Test
 
