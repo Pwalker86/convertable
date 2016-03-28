@@ -1,6 +1,4 @@
 module ToMetric
-#TODO: Figure out how to print unit when returning a Numeric. i.e. 3.meters.to_centimeters => 300 centimeters
-
   def to_centimeter
     ConvertableUnit.new(base_meters * 100, base_meters, :centimeter)
   end
