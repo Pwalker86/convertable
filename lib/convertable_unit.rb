@@ -24,4 +24,14 @@ class ConvertableUnit
     ConvertableUnit.new(base_meters - other.base_meters, base_meters - other.base_meters)
   end
 
+  def *(other)
+    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_meters * other.base_meters, base_meters * other.base_meters)
+  end
+
+  def /(other)
+    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_meters / other.base_meters, base_meters / other.base_meters)
+  end
+
 end

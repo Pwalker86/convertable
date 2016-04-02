@@ -46,4 +46,28 @@ class ConvertableUnitTest < Minitest::Test
     assert_equal 3, (4.meters - 100.centimeters).base_meters
   end
 
+  def test_multiplication_returns_ConvertableUnit
+    assert_kind_of ConvertableUnit, (5.meters * 4.inches)
+  end
+
+  def test_multiplication_value
+    assert_equal 32, (4.meters * 8.meters).value
+  end
+
+  def test_multiplication_base_meters
+    assert_equal 8, (4.meters * 200.centimeters).base_meters
+  end
+
+  def test_division_returns_ConvertableUnit
+    assert_kind_of ConvertableUnit, (5.meters / 4.inches)
+  end
+
+  def test_division_value
+    assert_equal 2, (4.meters / 2.meters).value
+  end
+
+  def test_division_base_meters
+    assert_equal 2, (4.meters / 200.centimeters).base_meters
+  end
+
 end
