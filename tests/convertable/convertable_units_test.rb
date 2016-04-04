@@ -6,6 +6,10 @@ class ConvertableUnitTest < Minitest::Test
     assert_equal 20, 20.meter.value
   end
 
+  def test_method_return_class
+    assert_kind_of ConvertableUnit, 1.meter
+  end
+
   def test_initalize_base_amount
     assert_equal 15, 15.meters.base_amount
   end
