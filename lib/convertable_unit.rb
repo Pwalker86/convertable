@@ -1,12 +1,13 @@
 class ConvertableUnit
   include ToImperial
   include ToMetric
+  ERROR_MESSAGE = 'Please use a unit I can convert!'
 
-  attr_accessor :value, :unit, :base_meters
+  attr_accessor :value, :unit, :base_amount
 
-  def initialize(value, base_meters = nil, unit = :meter)
+  def initialize(value, unit, base_amount = nil)
     @value = value
-    @base_meters = base_meters || value
+    @base_amount = base_amount || value
     @unit = unit
   end
 
@@ -15,23 +16,23 @@ class ConvertableUnit
   end
 
   def +(other)
-    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
-    ConvertableUnit.new(base_meters + other.base_meters, base_meters + other.base_meters)
+    raise ArgumentError, ERROR_MESSAGE unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_amount + other.base_amount, unit, base_amount + other.base_amount)
   end
 
   def -(other)
-    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
-    ConvertableUnit.new(base_meters - other.base_meters, base_meters - other.base_meters)
+    raise ArgumentError, ERROR_MESSAGE unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_amount - other.base_amount, unit, base_amount - other.base_amount)
   end
 
   def *(other)
-    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
-    ConvertableUnit.new(base_meters * other.base_meters, base_meters * other.base_meters)
+    raise ArgumentError, ERROR_MESSAGE unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_amount * other.base_amount, unit, base_amount * other.base_amount)
   end
 
   def /(other)
-    raise ArgumentError, 'Please use a unit I can convert!' unless other.is_a? ConvertableUnit
-    ConvertableUnit.new(base_meters / other.base_meters, base_meters / other.base_meters)
+    raise ArgumentError, ERROR_MESSAGE unless other.is_a? ConvertableUnit
+    ConvertableUnit.new(base_amount / other.base_amount, unit, base_amount / other.base_amount)
   end
 
 end
