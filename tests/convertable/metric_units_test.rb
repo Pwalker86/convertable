@@ -29,7 +29,7 @@ class MetricUnitsTest < Minitest::Test
       assert_in_delta 0.00324, 3.24.milligram.value, 0.001
     end
 
-    def test_centiigram_method_value
+    def test_centigram_method_value
       assert_in_delta 0.0324, 3.24.centigram.value, 0.001
     end
 

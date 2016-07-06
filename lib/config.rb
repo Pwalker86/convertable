@@ -1,5 +1,6 @@
 require 'conversions/length/to_imperial'
 require 'conversions/length/to_metric'
+require 'conversions/mass/to_metric'
 require 'units/length/metric_units'
 require 'units/length/imperial_units'
 require 'units/mass/metric_units'

@@ -12,23 +12,23 @@ GEM
       loggability (~> 0.11)
     loggability (0.11.0)
     method_source (0.8.2)
-    minitest (5.8.4)
+    minitest (5.9.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    rake (10.5.0)
+    rake (11.2.2)
     slop (3.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.7)
+  bundler
   convertable!
   minitest
   pry
-  rake (~> 10.0)
+  rake
 
 BUNDLED WITH
    1.11.2

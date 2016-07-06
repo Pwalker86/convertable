@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.authors       = ['Phil Walker', 'Ryan Cobb', 'Quintin Adam']
   s.files         = Dir.glob('lib/**/*') + Dir.glob('test/**/*')
 
-  s.add_development_dependency 'bundler', '~> 1.7'
-  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'pry'
 
